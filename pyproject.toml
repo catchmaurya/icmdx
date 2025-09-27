@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "icmdx"
+version = "0.1.1"
+description = "ic — intelligent command: tiny phrases → safe, powerful log/file ops"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Maurya", email = "catchmaurya@gmail.com" }]
+requires-python = ">=3.8"
+keywords = ["cli", "logs", "devops", "nl2bash", "grep", "jq", "triage"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: System :: Logging",
+  "Topic :: Utilities"
+]
+dependencies = [
+  "python-dateutil>=2.9",
+  "pyyaml>=6.0",
+  "rich>=13.7",
+  "tabulate>=0.9"
+]
+
+[project.scripts]
+ic = "icmd.__main__:main"
